@@ -234,25 +234,31 @@ img {
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
+  /* Show menu icon */
   .menu-toggle {
     display: block;
     cursor: pointer;
     color: white;
     font-size: 1.8rem;
     padding-right: 1rem;
+    z-index: 10000;
   }
 
+  /* Navigation menu styling */
   .nav-links {
     flex-direction: column;
     align-items: flex-start;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95); /* darker background for better contrast */
     position: absolute;
-    top: 70px; /* adjust based on navbar height */
+    top: 70px; /* adjust to match navbar height */
+    left: 0;
     right: 0;
     width: 100%;
     padding: 1rem;
-    display: none; /* hide by default */
+    display: none;
+    z-index: 9999;
   }
 
   .nav-links.show {
@@ -266,8 +272,44 @@ img {
     font-size: 1.5rem;
     padding-right: 1rem;
   }
+
+  /* Fix hero section shrink issue */
+  .hero {
+    padding-top: 120px;
+    min-height: 80vh;
+    height: auto;
+  }
+
+  /* Improve readability of text inside hero on small screens */
+  .hero h1, .hero h2, .hero h3, .hero p {
+    font-size: clamp(1rem, 5vw, 1.8rem);
+  }
+
+  /* Ensure hero content stays above slideshow and nav */
+  .hero-content {
+    z-index: 1;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.4); /* optional for readability */
+    border-radius: 10px;
+  }
+
+  /* Adjust images in about section */
+  .about-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Instructor cards stack */
+  .instructor-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 
+
+/* .hero h1, .hero h2, .hero h3, .hero p {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+} */
 
 .registration-form {
   display: flex;
