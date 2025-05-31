@@ -25,6 +25,11 @@
          <img src="img/PEEClogo.png" alt="PEEC Logo" class="logo-circle">
         <!-- <span>PhD School 2025</span> -->
       </div>
+
+    <!-- Menu icon for mobile -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#about-wie">WIE</a></li>
@@ -441,6 +446,13 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
           };
     </script>
+
+    <script>
+      function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('show');
+      }
+    </script>
+
 
 
 </body>
