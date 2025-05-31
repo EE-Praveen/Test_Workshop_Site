@@ -448,10 +448,22 @@
     </script>
 
     <script>
+      // Toggle the mobile menu
       function toggleMenu() {
         document.querySelector('.nav-links').classList.toggle('show');
       }
+
+      // Close the mobile menu when a link is clicked (on mobile only)
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          const menu = document.querySelector('.nav-links');
+          if (menu.classList.contains('show')) {
+            menu.classList.remove('show');
+          }
+        });
+      });
     </script>
+
 
 
 
