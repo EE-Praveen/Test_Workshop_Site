@@ -179,12 +179,7 @@ body {
   height: auto;
 } */
 
-.hero-logos img,
-.logo-circle img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
+
 
 
 /* Sections */
@@ -303,6 +298,13 @@ body {
   .instructor-card {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+
+  .hero-logos img,
+  .logo-circle img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
   }
 }
 
